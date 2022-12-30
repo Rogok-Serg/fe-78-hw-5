@@ -40,7 +40,7 @@
         <section class="hero">
             <div class="hero-container container">
                 <h1 class="title-hero title">Effective Solutions <br>for Your Business</h1>
-                <button class="btn" type="button">Order Service</button>
+                <button class="btn" type="button" data-modal-open>Order Service</button>
             </div>
         </section>
         <!-- Властивості -->
@@ -364,5 +364,16 @@
             </ul>
         </div>
     </footer>
+    <!-- Модальне вікно -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-close-btn" data-modal-close>
+                <svg class="modal-clise-btn-icon" width="8" height="8">
+                    <use href="./images/symbol-defs.svg#icon-close-black" ></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html> 

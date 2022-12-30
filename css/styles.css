@@ -46,6 +46,8 @@ body {
 
 /* <<<<< Шапка сайта >>>>> */
 .page-header {
+    position: absolute;
+    width: 100%;
     background: #FFFFFF; 
     border: 0.5px solid #F4F4FD;
     padding-top: 24px;
@@ -93,7 +95,8 @@ span {
 }
 .menu-link {
     font-weight: 600;
-    color: #2E2F42
+    color: #2E2F42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 .menu-link:hover,
 .menu-link:focus {
@@ -114,6 +117,7 @@ span {
 .contact-mail,
 .contact-phone {
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-mail:hover,
@@ -501,8 +505,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     row-gap: 48px;
        
 }
-.title-text{
-    
+.title-text{    
     padding-left: 16px;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -516,6 +519,30 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 .card-link {
     width: calc((100% - 48px) / 3);
 }
+.overlay-card {
+    position: relative;
+    overflow: hidden;
+}
+.overlay {    
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transform: translate(0, 100%);
+    transition: transform 500ms linear;
+    padding-left: 32px;
+    padding-top: 40px;
+    padding-right: 32px;
+    background-color: #4D5AE5;
+    color: #F4F4FD;
+
+}
+.overlay-card-wrapper:hover .overlay,
+.overlay-card-wrapper:focus .overlay {
+    transform: translate(0, 0);
+}
 
 
 
@@ -524,3 +551,55 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 /* <<<<< /Картки >>>>> */
 
 /* <<<<< /Тіло сторінки портфоліо >>>>> */
+
+/* <<<<< Модальне вікно >>>>> */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(46, 47, 66, 0.4);
+    transition: opacity 500ms linear, visibility 500ms ease-in;
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    height: 576px;
+    background: #FCFCFC;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.modal-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    background: #404BBF;
+}
+.modal-close-btn:hover .modal-clise-btn-icon,
+.modal-close-btn:focus .modal-clise-btn-icon {
+    fill: #FFFFFF;
+}
+/* <<<<< /Модальне вікно >>>>> */
