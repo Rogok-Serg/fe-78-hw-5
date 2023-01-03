@@ -150,7 +150,7 @@ span {
 
 /* <<<<< Компоненти >>>>> */
 .title {
-    font-weight: 600;
+    font-weight: 700;
     color: #2E2F42;
 }
 .text {
@@ -198,9 +198,9 @@ span {
     padding-bottom: 16px;
     padding-left: 32px;
     padding-right: 32px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
-    line-height: 1.19;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     color: #FFFFFF;
     background: #4D5AE5;
@@ -235,6 +235,7 @@ span {
     display: flex;
     flex-direction: column;
     margin-bottom: 8px;
+    font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -314,6 +315,7 @@ span {
 .employees-name {
     display: flex;
     justify-content: center;
+    font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -503,13 +505,15 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     background: #F4F4FD;
     border: 0 solid #E7E9FC;
     border-radius: 4px;
+    font-weight: 500;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     color: #4D5AE5;
     cursor: pointer;
-
-}
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}   
 .btn-filters:hover,
 .btn-filters:focus {
     background-color: #4D5AE5;
@@ -534,13 +538,18 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     padding-bottom: 32px;
     background: #FFFFFF;
     border: 0.5px solid #F4F4FD;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+   
 }
+.card-title {
+    font-weight: 500;
+}
+
  .card-text {
     margin-top: 8px;
 }
 .card-link {
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .overlay-card {
     position: relative;
